@@ -1,6 +1,7 @@
 package me.davydovep.recipesapp_4.controller;
 
 
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ public class InfoController {
     }
 
     @GetMapping("/info")
+    @Operation(summary = "infoController")
     public String about() {
         return "Евгений Давыдов, RecipesApp, 13.01.2023, Приложение содержащее в себе книгу кулинарных рецептов.";
     }
